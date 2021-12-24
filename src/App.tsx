@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom'
+import { Layout } from './components/Layout'
+import About from './pages/About'
+import Community from './pages/Community'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import Title from './pages/Title'
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="titles" element={<Title />} />
+                <Route path="community" element={<Community />} />
+                <Route path="about" element={<About />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    )
 }
 
-export default App;
+export default App
