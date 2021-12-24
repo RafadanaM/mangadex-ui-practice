@@ -13,7 +13,7 @@ export const Layout = () => {
             <Sidebar isOpen={isOpen} setOpen={setIsOpen} />
             <div className="transition-all duration-300 flex flex-col flex-grow flex-shrink min-w-0">
                 <Navbar isOpen={isOpen} setOpen={setIsOpen} />
-                <div className="main-container flex-grow py-3">
+                <div className="main-container flex-grow pb-3">
                     <Outlet />
                 </div>
             </div>

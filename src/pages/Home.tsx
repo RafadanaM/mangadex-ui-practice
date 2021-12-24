@@ -29,17 +29,17 @@ const Home: React.FC = () => {
         <>
             <div className="flex items-center justify-between mb-4">
                 <h2 className="font-semibold text-2xl">Seasonal</h2>
-                <FiArrowRight className="w-6 h-6" />
+                <FiArrowRight className="icon" />
             </div>
             <SeasonalSwiper />
             <div className="flex items-center justify-between mb-4 mt-10">
                 <h2 className="font-semibold text-2xl">Latest Updates</h2>
-                <FiArrowRight className="w-6 h-6" />
+                <FiArrowRight className="icon" />
             </div>
             <UpdateCards />
             <div className="flex items-center justify-between mb-4 mt-10">
                 <h2 className="font-semibold text-2xl">Recently Added</h2>
-                <FiArrowRight className="w-6 h-6" />
+                <FiArrowRight className="icon" />
             </div>
             <AddedSwiper />
         </>
