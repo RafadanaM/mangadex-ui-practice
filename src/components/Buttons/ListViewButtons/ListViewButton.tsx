@@ -7,7 +7,7 @@ import { ListView } from '../../../utils/types'
 interface ListViewButtonI {
     type: ListView
     selectedView: ListView
-    setSelectedView: React.Dispatch<React.SetStateAction<ListView>>
+    setSelectedView: (listViewType: ListView) => void
 }
 
 const ListViewButton = ({
