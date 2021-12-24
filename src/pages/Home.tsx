@@ -1,9 +1,9 @@
 // import { useEffect } from 'react'
 // import { useSearchParams } from 'react-router-dom'
-import { FiArrowRight } from 'react-icons/fi'
 import UpdateCards from '../components/Cards/UpdateCards/UpdateCards'
 import AddedSwiper from '../components/Swiper/AddedSwiper'
 import SeasonalSwiper from '../components/Swiper/SeasonalSwiper'
+import ContentTitle from '../components/UI/ContentTitle'
 
 const Home: React.FC = () => {
     // const [searchParams] = useSearchParams()
@@ -27,20 +27,11 @@ const Home: React.FC = () => {
     // }
     return (
         <>
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="font-semibold text-2xl">Seasonal</h2>
-                <FiArrowRight className="icon" />
-            </div>
+            <ContentTitle title="Seasonal" />
             <SeasonalSwiper />
-            <div className="flex items-center justify-between mb-4 mt-10">
-                <h2 className="font-semibold text-2xl">Latest Updates</h2>
-                <FiArrowRight className="icon" />
-            </div>
+            <ContentTitle title="Latest Updates" />
             <UpdateCards />
-            <div className="flex items-center justify-between mb-4 mt-10">
-                <h2 className="font-semibold text-2xl">Recently Added</h2>
-                <FiArrowRight className="icon" />
-            </div>
+            <ContentTitle title="Recently Added" />
             <AddedSwiper />
         </>
     )

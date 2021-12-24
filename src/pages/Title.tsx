@@ -14,7 +14,7 @@ const Title = () => {
                 />
                 <h2 className="text-2xl font-semibold">Advanced Search</h2>
             </div>
-            <div className="flex flex-grow items-center mb-4">
+            <div className="flex flex-grow items-center mb-6">
                 <div className="flex gap-x-4 items-center flex-grow p-2 rounded bg-secondary">
                     <FiSearch className="icon" />
                     <input
