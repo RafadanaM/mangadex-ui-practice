@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ListView } from '../../../utils/types'
+import { ListView, listViews } from '../../../utils/types'
 import ListViewButton from './ListViewButton'
 
 const ListViewButtons = () => {
@@ -22,21 +22,14 @@ const ListViewButtons = () => {
             <div
                 className={`w-11 h-11 transition-all absolute left bg-black rounded-sm top-0 ${slider()}`}
             />
-            <ListViewButton
-                type="normal"
-                selectedView={selectedView}
-                setSelectedView={setSelectedView}
-            />
-            <ListViewButton
-                type="dense"
-                selectedView={selectedView}
-                setSelectedView={setSelectedView}
-            />
-            <ListViewButton
-                type="cover-only"
-                selectedView={selectedView}
-                setSelectedView={setSelectedView}
-            />
+            {listViews.map((listView: ListView) => (
+                <ListViewButton
+                    key={listView}
+                    type={listView}
+                    selectedView={selectedView}
+                    setSelectedView={setSelectedView}
+                />
+            ))}
         </div>
     )
 }

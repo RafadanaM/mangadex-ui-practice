@@ -1,1 +1,2 @@
-export type ListView = 'normal' | 'dense' | 'cover-only'
+export const listViews = ['normal', 'dense', 'cover-only'] as const
+export type ListView = typeof listViews[number]
