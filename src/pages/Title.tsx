@@ -58,7 +58,7 @@ const Title = () => {
                         className="w-full bg-secondary placeholder:text-black"
                     />
                 </div>
-                <div className="flex items-center gap-x-1 ml-7">
+                <div className="flex items-center gap-x-1 ml-7 cursor-pointer">
                     <FiFilter className="icon" />
                     <span className="font-medium">Filter</span>
                 </div>
