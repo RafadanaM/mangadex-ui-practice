@@ -17,8 +17,9 @@ const SeasonalSwiper = () => {
             {Array(10)
                 .fill(0)
                 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                .map((_) => (
-                    <SwiperSlide style={{ maxWidth: '384px' }}>
+                .map((_, idx) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <SwiperSlide key={idx} style={{ maxWidth: '384px' }}>
                         <SeasonalCard />
                     </SwiperSlide>
                 ))}

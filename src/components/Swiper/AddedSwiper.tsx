@@ -17,8 +17,9 @@ const AddedSwiper = () => {
             {Array(20)
                 .fill(0)
                 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                .map((_) => (
-                    <SwiperSlide style={{ maxWidth: '128px' }}>
+                .map((_, idx) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <SwiperSlide key={idx} style={{ maxWidth: '128px' }}>
                         <AddedCard />
                     </SwiperSlide>
                 ))}
