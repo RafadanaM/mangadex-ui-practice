@@ -1,20 +1,15 @@
-import { useEffect, useState } from 'react'
 import getUserPreferences from '../../../utils/getUserPreferences'
 import { ListView, listViews } from '../../../utils/types'
 import ListViewButton from './ListViewButton'
 
-const ListViewButtons = () => {
-    const [selectedView, setSelectedView] = useState<ListView>()
-
-    useEffect(() => {
-        const userPreferences = getUserPreferences()
-        if (userPreferences?.listView) {
-            setSelectedView(userPreferences.listView)
-        } else {
-            setSelectedView('normal')
-        }
-    }, [])
-
+interface ListViewButtonsI {
+    selectedView: ListView | undefined
+    setSelectedView: React.Dispatch<React.SetStateAction<ListView | undefined>>
+}
+const ListViewButtons = ({
+    selectedView,
+    setSelectedView,
+}: ListViewButtonsI) => {
     const changeView = (listViewType: ListView) => {
         const userPreferences = getUserPreferences()
         if (userPreferences) {
@@ -34,7 +29,7 @@ const ListViewButtons = () => {
             case 'cover-only':
                 return 'left-[5.5rem]'
             case 'normal':
-                return 'left-o'
+                return 'left-0'
 
             default:
                 return 'hidden'
