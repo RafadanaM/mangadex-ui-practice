@@ -39,7 +39,7 @@ const ListViewButtons = ({
     return (
         <div className="flex items-center relative rounded-sm bg-secondary">
             <div
-                className={`w-11 h-11 transition-all absolute left bg-black rounded-sm top-0 ${slider()}`}
+                className={`w-11 h-full transition-all absolute left bg-black rounded-sm top-0 ${slider()}`}
             />
 
             {selectedView &&
