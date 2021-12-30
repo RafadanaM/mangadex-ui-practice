@@ -15,3 +15,6 @@ export const sorts = [
     'Year Descending',
 ] as const
 export type MangaSort = typeof sorts[number]
+
+export const PublicationStatuses = ['unknown', 'ongoing', 'completed'] as const
+export type PublicationStatus = typeof PublicationStatuses[number]

@@ -30,4 +30,12 @@
     .icon {
         @apply w-6 h-6;
     }
+
+    .icon-small {
+        @apply w-4 h-4;
+    }
+
+    .dot {
+        @apply h-2 w-2 rounded inline-flex justify-self-center leading-4 select-none;
+    }
 }

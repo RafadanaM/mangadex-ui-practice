@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { FiArrowLeft, FiFilter, FiSearch } from 'react-icons/fi'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import ListViewButtons from '../components/Buttons/ListViewButtons/ListViewButtons'
+import TitleCard from '../components/Cards/TitleCard'
 import Dropdown from '../components/Dropdown/Dropdown'
 import getUserPreferences from '../utils/getUserPreferences'
 import { ListView, MangaSort, sorts } from '../utils/types'
@@ -63,7 +64,7 @@ const Title = () => {
                     <span className="font-medium">Filter</span>
                 </div>
             </div>
-            <div className="flex flex-grow justify-between items-center">
+            <div className="flex flex-grow justify-between items-center mb-6">
                 <Dropdown
                     selectedData={getCurrentSort()}
                     data={sorts}
@@ -73,6 +74,9 @@ const Title = () => {
                     selectedView={selectedView}
                     setSelectedView={setSelectedView}
                 />
+            </div>
+            <div className="flex flex-grow">
+                <TitleCard />
             </div>
         </>
     )

@@ -52,7 +52,7 @@ const Dropdown = ({ data, selectedData, onItemClick }: DropdownI) => {
             </div>
 
             <div
-                className={`absolute transition-all ease-in-out mt-px top-full left-0 w-[300px] bg-secondary transform origin-top overflow-hidden ${
+                className={`absolute transition-all shadow-md ease-in-out mt-px top-full left-0 w-[300px] bg-secondary transform origin-top overflow-hidden ${
                     open ? 'scale-y-100' : 'scale-y-0'
                 }`}
             >

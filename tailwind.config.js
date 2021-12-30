@@ -11,6 +11,9 @@ module.exports = {
     content: ['./src/**/*.{ts,tsx}'],
     theme: {
         extend: {
+            fontSize: {
+                '2xs': ['0.625rem', '1rem'],
+            },
             boxShadow: {
                 'inner-md': 'inset -25px 0px 9px -25px rgba(0, 0, 0, 0.1)',
             },
