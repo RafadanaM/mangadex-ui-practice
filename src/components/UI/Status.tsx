@@ -19,7 +19,7 @@ const Status = ({ status }: StatusI) => {
     }
 
     return (
-        <div className="flex items-center  bg-gray-200 bg-blue rounded py-1 pl-1 pr-2">
+        <div className="status">
             <span className={`dot m-1.5 ${dotColor()}`} />
             <span className="capitalize text-xs">{status}</span>
         </div>

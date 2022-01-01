@@ -41,6 +41,19 @@ const Title = () => {
         }
     }
 
+    const cardType = () => {
+        switch (selectedView) {
+            case 'cover-only':
+                return ''
+
+            case 'dense':
+                return 'two-cols dense-card'
+
+            default:
+                return 'normal-card'
+        }
+    }
+
     return (
         <>
             <div className="flex gap-x-4 items-center mb-4">
@@ -75,7 +88,9 @@ const Title = () => {
                     setSelectedView={setSelectedView}
                 />
             </div>
-            <div className="flex flex-grow">
+            <div className={`grid gap-2 ${cardType()}`}>
+                <TitleCard />
+                <TitleCard />
                 <TitleCard />
             </div>
         </>

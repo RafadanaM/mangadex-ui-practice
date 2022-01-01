@@ -38,4 +38,87 @@
     .dot {
         @apply h-2 w-2 rounded inline-flex justify-self-center leading-4 select-none;
     }
+
+    /* START OF TITLE CARD */
+
+    /* THIS IS HELL!!!!!!!!!!!!!
+     Using grid area like mangadex is probably better, less confusing, and cleaner */
+
+    .cover {
+        @apply col-start-1 row-start-1 row-span-3 max-h-full;
+    }
+
+    .author {
+        @apply block;
+    }
+
+    .title {
+        @apply cursor-pointer;
+    }
+
+    .stat {
+        @apply flex items-center;
+    }
+
+    .status {
+        @apply flex items-center bg-gray-200 rounded py-1 pl-1 pr-2;
+    }
+
+    .tags {
+        @apply flex items-center flex-wrap gap-x-2 col-span-4;
+    }
+
+    .desc {
+        @apply col-span-4 row-span-2 h-20 overflow-hidden;
+    }
+
+    .two-cols {
+        @apply grid-cols-1 md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:grid-cols-1 xl:[grid-template-columns:repeat(2,minmax(0,1fr))];
+    }
+
+    .normal-card > div {
+        @apply [height:unset] [grid-template-rows:auto_auto_1fr] [grid-template-columns:84px_auto_1fr_auto_auto];
+    }
+
+    .dense-card > div {
+        @apply [grid-template-rows:auto_auto_auto_1fr] [grid-template-columns:min(25%,150px)_1fr_auto];
+    }
+
+    .dense-card .author {
+        @apply hidden;
+    }
+
+    .dense-card .title {
+        @apply col-span-2;
+    }
+
+    .dense-card .stat {
+        @apply row-start-2;
+    }
+
+    .dense-card .stat {
+        @apply row-start-2 flex-grow;
+    }
+
+    .dense-card .stat > div {
+        @apply flex-grow;
+    }
+
+    .dense-card .status {
+        @apply row-start-2;
+    }
+
+    .dense-card .tags {
+        @apply row-start-3 col-span-2;
+    }
+
+    .dense-card .cover {
+        @apply row-span-4 col-start-1 row-start-1;
+    }
+
+    .dense-card .desc {
+        @apply col-start-2 col-span-2 row-span-1 h-[8.4em];
+    }
+
+    /* END OF TITLE CARD */
 }
