@@ -18,6 +18,7 @@ module.exports = {
                 'inner-md': 'inset -25px 0px 9px -25px rgba(0, 0, 0, 0.1)',
             },
             screens: {
+                md: '832px',
                 '3xl': '1904px',
             },
             colors: {

@@ -1,9 +1,8 @@
-import { FiBookmark, FiEye, FiMessageSquare, FiStar } from 'react-icons/fi'
 import cover from '../../assets/cover.jpg'
 import flag from '../../assets/flag.svg'
-import Stat from '../UI/Stat'
+import Stats from '../UI/Stats/Stats'
 import Status from '../UI/Status'
-import Tag from '../UI/Tag'
+import Tags from '../UI/Tags/Tags'
 
 const TitleCard = () => {
     return (
@@ -26,24 +25,9 @@ const TitleCard = () => {
                 </span>
             </div>
             <span className="author">Daisuki Kadokuni</span>
-            <div className="stat">
-                <Stat icon={<FiStar className="icon-small" />} value="0" />
-                <Stat
-                    icon={<FiBookmark className="icon-small" />}
-                    value="N/A"
-                />
-                <Stat icon={<FiEye className="icon-small" />} value="0" />
-                <Stat
-                    icon={<FiMessageSquare className="w-4 h-4" />}
-                    value="0"
-                />
-            </div>
+            <Stats />
             <Status status="ongoing" />
-            <div className="tags">
-                <Tag />
-                <Tag />
-                <Tag />
-            </div>
+            <Tags />
             <div className="desc">desc</div>
         </div>
     )
